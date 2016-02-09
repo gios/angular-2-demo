@@ -30,7 +30,7 @@ System.register(["angular2/core", "./todo-service"], function(exports_1) {
                 TodoInput = __decorate([
                     core_1.Component({
                         selector: 'todo-input',
-                        template: "<div>\n  <input type=\"text\" #myInput>\n  <button (mouseover)=\"onClick(myInput.value)\">Click me</button>\n  </div>"
+                        template: "<div>\n  <input type=\"text\" #myInput>\n  <button (click)=\"onClick(myInput.value)\">Click me</button>\n  </div>"
                     }), 
                     __metadata('design:paramtypes', [todo_service_1.TodoService])
                 ], TodoInput);
