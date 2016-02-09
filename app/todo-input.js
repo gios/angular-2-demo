@@ -1,4 +1,4 @@
-System.register(["angular2/platform/browser", "angular2/core", "./todo-input"], function(exports_1) {
+System.register(["angular2/core"], function(exports_1) {
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
         var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
         if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -8,35 +8,28 @@ System.register(["angular2/platform/browser", "angular2/core", "./todo-input"], 
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var browser_1, core_1, todo_input_1;
-    var App;
+    var core_1;
+    var TodoInput;
     return {
         setters:[
-            function (browser_1_1) {
-                browser_1 = browser_1_1;
-            },
             function (core_1_1) {
                 core_1 = core_1_1;
-            },
-            function (todo_input_1_1) {
-                todo_input_1 = todo_input_1_1;
             }],
         execute: function() {
-            App = (function () {
-                function App() {
+            TodoInput = (function () {
+                function TodoInput() {
                 }
-                App = __decorate([
+                TodoInput = __decorate([
                     core_1.Component({
-                        selector: 'app',
-                        directives: [todo_input_1.TodoInput],
-                        template: "<div><todo-input></todo-input></div>"
+                        selector: 'todo-input',
+                        template: "<div>I am todo input</div>"
                     }), 
                     __metadata('design:paramtypes', [])
-                ], App);
-                return App;
+                ], TodoInput);
+                return TodoInput;
             })();
-            browser_1.bootstrap(App);
+            exports_1("TodoInput", TodoInput);
         }
     }
 });
-//# sourceMappingURL=main.js.map
+//# sourceMappingURL=todo-input.js.map
