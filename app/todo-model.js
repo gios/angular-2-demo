@@ -9,6 +9,12 @@ System.register([], function(exports_1) {
                     this.title = title;
                     this.status = "started";
                 }
+                TodoModel.prototype.toggle = function () {
+                    this.status =
+                        this.status == "started"
+                            ? "completed"
+                            : "started";
+                };
                 return TodoModel;
             })();
             exports_1("TodoModel", TodoModel);
