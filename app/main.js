@@ -1,4 +1,4 @@
-System.register(["angular2/platform/browser", "angular2/core", "./todo-input", "./todo-service", "./todo-list"], function(exports_1) {
+System.register(["angular2/platform/browser", "angular2/core", "./todo-input", "./todo-service", "./todo-list", "./status-selector"], function(exports_1) {
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
         var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
         if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -8,7 +8,7 @@ System.register(["angular2/platform/browser", "angular2/core", "./todo-input", "
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var browser_1, core_1, todo_input_1, todo_service_1, todo_list_1;
+    var browser_1, core_1, todo_input_1, todo_service_1, todo_list_1, status_selector_1;
     var App;
     return {
         setters:[
@@ -26,6 +26,9 @@ System.register(["angular2/platform/browser", "angular2/core", "./todo-input", "
             },
             function (todo_list_1_1) {
                 todo_list_1 = todo_list_1_1;
+            },
+            function (status_selector_1_1) {
+                status_selector_1 = status_selector_1_1;
             }],
         execute: function() {
             App = (function () {
@@ -34,8 +37,8 @@ System.register(["angular2/platform/browser", "angular2/core", "./todo-input", "
                 App = __decorate([
                     core_1.Component({
                         selector: 'app',
-                        directives: [todo_input_1.TodoInput, todo_list_1.TodoList],
-                        template: "<div>\n  <todo-input></todo-input>\n  <todo-list></todo-list>\n  </div>"
+                        directives: [todo_input_1.TodoInput, todo_list_1.TodoList, status_selector_1.StatusSelector],
+                        template: "<div>\n  <todo-input></todo-input>\n  <status-selector (select)=\"status = $event\"></status-selector>\n  <todo-list [status]=\"status\"></todo-list>\n  </div>"
                     }), 
                     __metadata('design:paramtypes', [])
                 ], App);

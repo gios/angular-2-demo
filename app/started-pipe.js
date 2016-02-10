@@ -19,8 +19,9 @@ System.register(['angular2/core'], function(exports_1) {
             StartedPipe = (function () {
                 function StartedPipe() {
                 }
-                StartedPipe.prototype.transform = function (value) {
-                    return value.filter(function (item) { return item.status === "started"; });
+                StartedPipe.prototype.transform = function (value, _a) {
+                    var status = _a[0];
+                    return value.filter(function (item) { return item.status === status; });
                 };
                 StartedPipe = __decorate([
                     core_1.Pipe({

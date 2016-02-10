@@ -29,12 +29,16 @@ System.register(["angular2/core", "./todo-service", "./todo-item-renderer", './s
                 function TodoList(todoService) {
                     this.todoService = todoService;
                 }
+                __decorate([
+                    core_1.Input(), 
+                    __metadata('design:type', Object)
+                ], TodoList.prototype, "status", void 0);
                 TodoList = __decorate([
                     core_1.Component({
                         selector: 'todo-list',
                         pipes: [started_pipe_1.StartedPipe],
                         directives: [todo_item_renderer_1.TodoItemRenderer],
-                        template: "<div>\n    <ul>\n      <li *ngFor=\"#todo of todoService.todos | started\">\n        <todo-item-renderer\n        [todo]=\"todo\"\n        (toggle)=\"todoService.toggleTodo($event)\">\n        </todo-item-renderer>\n      </li>\n    </ul>\n  </div>"
+                        template: "<div>\n    <ul>\n      <li *ngFor=\"#todo of todoService.todos | started : status\">\n        <todo-item-renderer\n        [todo]=\"todo\"\n        (toggle)=\"todoService.toggleTodo($event)\">\n        </todo-item-renderer>\n      </li>\n    </ul>\n  </div>"
                     }), 
                     __metadata('design:paramtypes', [todo_service_1.TodoService])
                 ], TodoList);
