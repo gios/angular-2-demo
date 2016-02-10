@@ -27,6 +27,9 @@ System.register(["angular2/core", "./todo-model"], function(exports_1) {
                         new todo_model_1.TodoModel("code")
                     ];
                 }
+                TodoService.prototype.addTodo = function (todo) {
+                    this.todos = this.todos.concat([todo]);
+                };
                 TodoService = __decorate([
                     core_1.Injectable(), 
                     __metadata('design:paramtypes', [])

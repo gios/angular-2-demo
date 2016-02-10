@@ -28,7 +28,7 @@ System.register(["angular2/core", "./todo-service", "./todo-model"], function(ex
                     this.todoModel = new todo_model_1.TodoModel();
                 }
                 TodoInput.prototype.onSubmit = function () {
-                    this.todoService.todos.push(this.todoModel);
+                    this.todoService.addTodo(this.todoModel);
                     console.log(this.todoService.todos);
                     this.todoModel = new todo_model_1.TodoModel();
                 };
