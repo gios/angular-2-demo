@@ -1,4 +1,4 @@
-import {Component, Input} from "angular2/core";
+import {Component, Input, Output, EventEmitter} from "angular2/core";
 
 @Component({
     selector: 'todo-item-renderer',
@@ -10,9 +10,10 @@ import {Component, Input} from "angular2/core";
     </style>
     <div>
         <span [ngClass]="todo.status">{{todo.title}}</span>
-        <button (click)="todo.toggle()">Toggle</button>
+        <button (click)="toggle.emit(todo)">Toggle</button>
     </div>`
 })
 export class TodoItemRenderer {
     @Input() todo;
+    @Output() toggle = new EventEmitter();
 }
