@@ -1,2 +1,2 @@
-# angular-2-demo
-Angular 2 Demo
+# Angular2 Demo
+npm start
