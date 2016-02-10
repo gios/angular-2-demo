@@ -24,6 +24,15 @@ System.register(["angular2/core", "./todo-model"], function(exports_1) {
                     this.todos = [
                         new todo_model_1.TodoModel("eat"),
                         new todo_model_1.TodoModel("sleep"),
+                        new todo_model_1.TodoModel("dance", "completed"),
+                        new todo_model_1.TodoModel("party"),
+                        new todo_model_1.TodoModel("work"),
+                        new todo_model_1.TodoModel("play"),
+                        new todo_model_1.TodoModel("record", "completed"),
+                        new todo_model_1.TodoModel("earn"),
+                        new todo_model_1.TodoModel("charm", "completed"),
+                        new todo_model_1.TodoModel("exercise"),
+                        new todo_model_1.TodoModel("swim", "completed"),
                         new todo_model_1.TodoModel("code")
                     ];
                 }

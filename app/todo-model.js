@@ -4,10 +4,11 @@ System.register([], function(exports_1) {
         setters:[],
         execute: function() {
             TodoModel = (function () {
-                function TodoModel(title) {
+                function TodoModel(title, status) {
                     if (title === void 0) { title = ""; }
+                    if (status === void 0) { status = "started"; }
                     this.title = title;
-                    this.status = "started";
+                    this.status = status;
                 }
                 TodoModel.prototype.toggle = function () {
                     this.status =
